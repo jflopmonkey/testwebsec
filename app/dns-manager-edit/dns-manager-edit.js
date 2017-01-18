@@ -29,7 +29,7 @@ angular.module('myApp.dns-manager-edit', ['ngRoute'])
 
     $scope.save = function () {
         if ($scope.isDirty()){
-            alert("saving...");
+            $http.put("/v1/dns/"+$location.search().id, $scope.dns)
         }
     }
 
