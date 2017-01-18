@@ -1,0 +1,33 @@
+<H1>DNS Manager</H1>
+<p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Value</th>
+                <th>Bypass</th>
+                <th>TTL</th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr ng-repeat="line in dns">
+                    <td>
+                        {{line.name}}
+                    </td>
+                    <td>
+                        {{line.value}}
+                    </td>
+                    <td>
+                        {{line.bypass}}
+                    </td>
+                    <td>
+                        {{line.ttl}}
+                    </td>
+                    <td>
+                        <a href="#!/dns-manager/edit?id={{line.id}}">Edit</a>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</p>
