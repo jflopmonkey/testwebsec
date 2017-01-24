@@ -1,4 +1,5 @@
-<H1>DNS Manager</H1>
+<H1>DNS Manager <a href="#!/dns-manager/add" class="btn btn-primary pull-right">New</a>
+</H1>
 <p>
     <table class="table">
         <thead>
@@ -26,6 +27,9 @@
                     </td>
                     <td>
                         <a href="#!/dns-manager/edit?id={{line.id}}">Edit</a>
+                    </td>
+                    <td>
+                        <a href="#!/dns-manager" ng-click="delete(line.id)">Delete</a>
                     </td>
                 </tr>
         </tbody>
