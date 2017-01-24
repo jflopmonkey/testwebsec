@@ -29,7 +29,17 @@ angular.module('myApp.dns-manager-edit', ['ngRoute'])
         }, function myError(response) {
             $scope.error = response.statusText;
         });
+    } else { // New
+        $scope.dns = {
+            id: "",
+            name: "",
+            ttl: 0,
+            bypass: false,
+            value: ""
+        }
+        $scope.dnsCopy = JSON.stringify($scope.dns)
     }
+
 
     $scope.isDirty = function () {
         return JSON.stringify($scope.dns) != $scope.dnsCopy
